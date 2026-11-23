@@ -1,0 +1,14 @@
+---
+import { services } from '../data/services';
+---
+<section class="section section-wrap" id="services">
+  <div class="section-heading reveal"><div><p class="eyebrow">CAPABILITIES / 02</p><h2>從電路診斷到零件製作，<br />回應設備現場的需求。</h2></div><p class="section-intro">以可追溯的檢測資訊與明確的規格確認，協助客戶掌握維修與委製的評估依據。</p></div>
+  <div class="service-grid">
+    {services.map((service) => <article class="service-card reveal"><div class="service-card-top"><span class="service-number">{service.number}</span><span class="mono">{service.en}</span></div><h3>{service.title}</h3><p class="service-intro">{service.intro}</p>
+      {service.items && <ul class="service-list">{service.items.map(item => <li>{item}</li>)}</ul>}
+      {service.groups && <div class="parts-groups">{service.groups.map(group => <div class="parts-group"><b>{group[0]}</b><p>{group[1]}</p></div>)}</div>}
+      <div class="service-note"><span>ASSESSMENT NOTE</span><p>{service.note}</p></div>
+    </article>)}
+  </div>
+  <div class="quote-note"><span class="quote-symbol">＋</span><div><b>檢測與報價說明</b><p>收到設備、零件樣品或圖面後，先確認需求與可行性；完成檢測／尺寸評估後提供報價，經客戶確認再安排施作。</p></div><span class="mono">NO WORK WITHOUT APPROVAL</span></div>
+</section>

@@ -1,0 +1,13 @@
+---
+import { shopInfo } from '../data/shopInfo';
+---
+<header class="site-header">
+  <a class="brand" href="#top" aria-label="力丞實業首頁"><span class="brand-mark">LC<span>／</span></span><span><strong>力丞實業</strong><small>INDUSTRIAL REPAIR LAB</small></span></a>
+  <nav aria-label="主要導覽"><a href="#services">服務項目</a><a href="#logs">修復與加工紀錄</a><a href="#process">服務流程</a><a href="#contact">聯絡資訊</a></nav>
+  <div class="header-actions"><span class="status"><i class="status-dot"></i><span data-open-status>狀態確認中</span></span><a class="button button-dark header-call" href={`tel:${shopInfo.tel}`}>立即致電 <span>↗</span></a><button class="menu-toggle" aria-label="開啟選單" aria-expanded="false">☰</button></div>
+</header>
+<script>
+const toggle = document.querySelector('.menu-toggle');
+toggle?.addEventListener('click', () => { const open = document.body.classList.toggle('nav-open'); toggle.setAttribute('aria-expanded', String(open)); });
+document.querySelectorAll('.site-header nav a').forEach(a => a.addEventListener('click', () => document.body.classList.remove('nav-open')));
+</script>

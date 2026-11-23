@@ -1,0 +1,14 @@
+---
+import { repairLogs } from '../data/repairLogs';
+---
+<section class="section section-dark" id="logs"><div class="section-wrap">
+  <div class="section-heading section-heading-light reveal"><div><p class="eyebrow">ANOMALY & FABRICATION LOGS / 03</p><h2>觀測紀錄。<br /><em>問題有跡可循。</em></h2></div><p class="section-intro">以工程檔案方式整理常見需求與處理節點。以下為示意紀錄格式，非特定客戶實績。</p></div>
+  <div class="filter-row" role="group" aria-label="案例分類篩選"><button class="filter-button active" data-filter="全部紀錄">全部紀錄 <span>05</span></button><button class="filter-button" data-filter="PCB板">PCB 板</button><button class="filter-button" data-filter="機械零件加工、製作">機械零件加工／製作</button></div>
+  <div class="logs-grid">{repairLogs.map((log) => <article class="log-card reveal" data-category={log.category}><div class="log-top"><span class="mono">{log.id}</span><span class="log-category">{log.category}</span></div><h3>{log.device}</h3><div class="log-detail"><small>01 / SYMPTOM — 異常現象／需求</small><p>{log.symptom}</p></div><div class="log-detail"><small>02 / DIAGNOSIS — 檢測與量測發現</small><p>{log.diagnosis}</p></div><div class="log-detail"><small>03 / EXECUTION — 修復／加工工序</small><p>{log.solution}</p></div><div class="log-bottom"><span>交期：{log.turnaround}</span><span>費用：{log.costRange}</span></div></article>)}</div>
+  <p class="logs-disclaimer">※ 案例內容為網站版型示意，不代表已完成之客戶案件、實際維修結果或固定報價。</p>
+</div></section>
+<script>
+const filterButtons = document.querySelectorAll('.filter-button');
+const cards = document.querySelectorAll('.log-card');
+filterButtons.forEach(button => button.addEventListener('click', () => { filterButtons.forEach(item => item.classList.remove('active')); button.classList.add('active'); const filter = button.dataset.filter; cards.forEach(card => { card.hidden = filter !== '全部紀錄' && card.dataset.category !== filter; }); }));
+</script>

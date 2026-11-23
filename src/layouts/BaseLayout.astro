@@ -1,0 +1,24 @@
+---
+import '../styles/global.css';
+import { shopInfo } from '../data/shopInfo';
+const { title = '力丞實業有限公司｜精密電路板維修與機械零件加工', description = '工業電路板檢測維修、機械零件加工與製作。提供現場親送、預約收件及全台寄修服務。' } = Astro.props;
+---
+<!doctype html>
+<html lang="zh-Hant-TW">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content={description} />
+    <meta name="theme-color" content="#f7f8f7" />
+    <title>{title}</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600&family=Noto+Sans+TC:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+    <script type="application/ld+json" set:html={JSON.stringify({
+      '@context':'https://schema.org','@type':'LocalBusiness','name':shopInfo.name,
+      'telephone':shopInfo.phone,'address':{'@type':'PostalAddress','streetAddress':'民安西路 252 巷 17 號 2 樓','addressLocality':'新莊區','addressRegion':'新北市','addressCountry':'TW'},
+      'openingHours':'Mo-Fr 11:00-20:30'
+    })} />
+  </head>
+  <body><slot /></body>
+</html>

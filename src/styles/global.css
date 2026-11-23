@@ -663,6 +663,15 @@ button {
   color:var(--text-secondary);
   line-height:2
 }
+.intake-contact-note {
+  margin-top:12px;
+  padding-left:14px;
+  border-left:4px solid var(--accent-signal);
+  font-size:24px;
+  font-weight:700;
+  line-height:1.6;
+  color:var(--text-primary);
+}
 .intake-aside {
   margin-top:42px;
   padding:18px;

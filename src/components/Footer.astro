@@ -1,4 +1,71 @@
 ---
 import { shopInfo } from '../data/shopInfo';
 ---
-<footer class="site-footer" id="contact"><div class="section-wrap"><div class="footer-main"><div><div class="brand footer-brand"><span class="brand-mark">LC<span>／</span></span><span><strong>力丞實業</strong><small>INDUSTRIAL REPAIR LAB</small></span></div><h2>讓設備回到<br />可靠的工作狀態。</h2><p>精密電路板維修與機械零件加工製作</p></div><div class="footer-contact"><p class="eyebrow">CONTACT / 06</p><a class="footer-phone" href={`tel:${shopInfo.tel}`}>{shopInfo.phone} <span>↗</span></a><p>{shopInfo.address}</p><p>{shopInfo.hours}</p><div class="footer-links"><a href={shopInfo.mapUrl} target="_blank" rel="noreferrer">Google Maps 導航 ↗</a><a href="#intake">線上需求登記 ↗</a></div><p class="line-placeholder">LINE 官方帳號：{shopInfo.line} <small>（示意 ID，上線前請替換）</small></p></div></div><div class="footer-bottom"><span>© {new Date().getFullYear()} 力丞實業有限公司 — 維修工作室</span><span class="mono">OBSERVE / DIAGNOSE / RESTORE</span></div></div></footer>
+
+<footer class="site-footer" id="contact">
+  <div class="section-wrap">
+    <div class="footer-main">
+      <div>
+        <div class="brand footer-brand">
+          <span class="brand-mark">LC<span>／</span></span>
+
+          <span>
+            <strong>力丞實業</strong>
+            <small>INDUSTRIAL REPAIR LAB</small>
+          </span>
+        </div>
+
+        <h2>
+          讓設備回到<br />
+          可靠的工作狀態。
+        </h2>
+
+        <p>電路板維修與機械零件加工製作</p>
+      </div>
+
+      <div class="footer-contact">
+        <p class="eyebrow">CONTACT / 06</p>
+
+        <a
+          class="footer-phone"
+          href={`tel:${shopInfo.tel}`}
+        >
+          {shopInfo.phone} <span>↗</span>
+        </a>
+
+        <p>{shopInfo.address}</p>
+
+        <p>{shopInfo.hours}</p>
+
+        <div class="footer-links">
+          <a
+            href={shopInfo.mapUrl}
+            target="_blank"
+            rel="noreferrer"
+          >
+            Google Maps 導航 ↗
+          </a>
+
+          <a href="#intake">
+            線上需求登記 ↗
+          </a>
+        </div>
+
+        <p class="line-placeholder">
+          LINE 官方ID：{shopInfo.line}
+          <small>
+        </p>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <span>
+        © {new Date().getFullYear()} 力丞實業有限公司 — 維修工作室
+      </span>
+
+      <span class="mono">
+        OBSERVE / DIAGNOSE / RESTORE
+      </span>
+    </div>
+  </div>
+</footer>

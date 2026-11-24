@@ -4,7 +4,7 @@ export const repairLogs = [
   { id:'OBS-014', category:'PCB板', device:'EMU500串列及網路控制器ses', symptom:'上電後無法正常啟動，疑似電源區異常。', diagnosis:'以分區量測方式檢查供電與訊號路徑，釐清異常區段及接點狀態。', solution:'針對確認異常的元件與焊點進行修復，再執行基本功能確認。', turnaround:'依檢測結果評估', costRange:'檢測後報價' },
   { id:'OBS-018', category:'PCB板', device:'EMU500旅客資訊系統PISC螢幕', symptom:'上電後無法正常啟動，疑似電源區異常。', diagnosis:'檢查輸入、轉換與輸出端狀態，逐步定位供電異常位置。', solution:'依故障點更換適用元件並檢查相關焊接與電路狀態。', turnaround:'依零件供應評估', costRange:'檢測後報價' },
   { id:'OBS-018', category:'PCB板', device:'EMU800旅客資訊系統PISC螢幕', symptom:'可以正常啟動但無法顯示，工作程序出現異常。', diagnosis:'檢查輸入、轉換與輸出端狀態，逐步定位供電異常位置。', solution:'依故障點更換適用元件並檢查相關焊接與電路狀態。', turnaround:'依零件供應評估', costRange:'檢測後報價' },
-  { id:'OBS-018', category:'PCB板', device:'EMU800旅客資訊系統PA播音控制器', symptom:'可以正常啟動但沒有聲音，音緣輸送異常。', diagnosis:'檢查輸入、轉換與輸出端狀態，逐步定位供電異常位置。', solution:'依故障點更換適用元件並檢查相關焊接與電路狀態。', turnaround:'依零件供應評估', costRange:'檢測後報價' },
+  { id:'OBS-018', category:'PCB板', device:'EMU800旅客資訊系統PA播音控制器', symptom:'可以正常啟動但沒有聲音，音源輸送異常。', diagnosis:'檢查輸入、轉換與輸出端狀態，逐步定位供電異常位置。', solution:'依故障點更換適用元件並檢查相關焊接與電路狀態。', turnaround:'依零件供應評估', costRange:'檢測後報價' },
   { id:'OBS-018', category:'PCB板', device:'門機控制盒 (DCU)', symptom:'上電後無法正常啟動，疑似電源區異常。', diagnosis:'檢查輸入、轉換與輸出端狀態，逐步定位供電異常位置。', solution:'依故障點更換適用元件並檢查相關焊接與電路狀態。', turnaround:'依零件供應評估', costRange:'檢測後報價' },
   { id:'OBS-018', category:'PCB板', device:'無線電主機總成', symptom:'傳輸端無訊號送出，發射訊號輸出不穩定。', diagnosis:'檢查輸入、轉換與輸出端狀態，逐步定位供電異常位置。', solution:'依故障點更換適用元件並檢查相關焊接與電路狀態。', turnaround:'依零件供應評估', costRange:'檢測後報價' },
   { id:'FAB-021', category:'機械零件加工、製作', device:'襯套／銷類零件', symptom:'既有零件磨耗，需依樣品製作替換件。', diagnosis:'依來樣確認外徑、內徑、長度與配合位置等尺寸需求。', solution:'確認材質與公差需求後，評估車削加工及尺寸檢驗方式。', turnaround:'依數量與工法評估', costRange:'圖面／樣品評估後報價' },

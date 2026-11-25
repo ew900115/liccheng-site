@@ -57,8 +57,11 @@ import { shopInfo } from '../data/shopInfo';
 
         <p class="line-placeholder">
           LINE 官方ID：{shopInfo.line}
-          Email address：{shopInfo.email}
           <small>
+        </p>
+        <p>
+        Email address：
+        <a href={`mailto:${shopInfo.email}`}>{shopInfo.email}</a>
         </p>
       </div>
     </div>

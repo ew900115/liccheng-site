@@ -32,7 +32,7 @@ import { shopInfo } from '../data/shopInfo';
 
         <a
           class="footer-phone"
-          href={`tel:${shopInfo.tel}`}
+          href={`email:${shopInfo.email}`}
         >
           {shopInfo.phone} <span>↗</span>
         </a>
@@ -57,6 +57,7 @@ import { shopInfo } from '../data/shopInfo';
 
         <p class="line-placeholder">
           LINE 官方ID：{shopInfo.line}
+          Email address：{shopInfo.email}
           <small>
         </p>
       </div>

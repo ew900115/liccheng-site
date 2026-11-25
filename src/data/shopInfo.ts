@@ -3,6 +3,7 @@ export const shopInfo = {
   shortName: '力丞實業',
   phone: '0912-267-588',
   tel: '0912-267-588',
+  email: 'cmy5431@gmail.com',
   address: '新北市新莊區民安西路 252 巷 17 號 2 樓',
   hours: '週一至週五 11:00 – 20:30（週六、週日公休）',
   line: '0912267588',

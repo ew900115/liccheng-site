@@ -1,12 +1,44 @@
 ---
 import { shopInfo } from '../data/shopInfo';
 ---
+
 <section class="quick-strip" aria-label="工作室資訊">
-  <div class="quick-cell"><span class="quick-label">01 / TECH LINE</span><small>服務專線</small><a href={`tel:${shopInfo.tel}`}>{shopInfo.phone}</a></div>
-  <div class="quick-cell"><span class="quick-label">02 / LOCATION</span><small>工作室地址</small><button class="copy-address" data-copy={shopInfo.address}>{shopInfo.address} <span>複製 ↗</span></button></div>
-  <div class="quick-cell"><span class="quick-label">03 / OPENING HOURS</span><small>營業時間</small><strong>週一至週五 11:00–20:30</strong></div>
-  <div class="quick-cell"><span class="quick-label">04 / LOGISTICS</span><small>收件與交貨</small><strong>親送檢測／預約洽談／全台寄送</strong></div>
+  <div class="quick-cell">
+    <span class="quick-label">01 / EMAIL</span>
+    <small>電子郵件</small>
+    <a href={`mailto:${shopInfo.email}`}>{shopInfo.email}</a>
+  </div>
+
+  <div class="quick-cell">
+    <span class="quick-label">02 / LOCATION</span>
+    <small>工作室地址</small>
+    <button class="copy-address" data-copy={shopInfo.address}>
+      {shopInfo.address} <span>複製 ↗</span>
+    </button>
+  </div>
+
+  <div class="quick-cell">
+    <span class="quick-label">03 / OPENING HOURS</span>
+    <small>營業時間</small>
+    <strong>週一至週五 11:00–20:30</strong>
+  </div>
+
+  <div class="quick-cell">
+    <span class="quick-label">04 / LOGISTICS</span>
+    <small>收件與交貨</small>
+    <strong>親送檢測／預約洽談／全台寄送</strong>
+  </div>
 </section>
+
 <script>
-document.querySelectorAll('[data-copy]').forEach(button => button.addEventListener('click', async () => { try { await navigator.clipboard.writeText(button.dataset.copy); button.innerHTML = `${button.dataset.copy} <span>已複製 ✓</span>`; } catch { button.innerHTML = `${button.dataset.copy} <span>請手動複製</span>`; } }));
+  document.querySelectorAll('[data-copy]').forEach((button) => {
+    button.addEventListener('click', async () => {
+      try {
+        await navigator.clipboard.writeText(button.dataset.copy);
+        button.innerHTML = `${button.dataset.copy} <span>已複製 ✓</span>`;
+      } catch {
+        button.innerHTML = `${button.dataset.copy} <span>請手動複製</span>`;
+      }
+    });
+  });
 </script>
